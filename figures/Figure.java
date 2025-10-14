@@ -25,11 +25,7 @@ public abstract class Figure implements IntFigure {
 
     @Override
     public String toString() {
-        return this.getClass().getSimpleName() + "{" +
-               "color='" + color + '\'' +
-               ", column=" + column +
-               ", row=" + row +
-               '}';
+        
     }
 }
 
