@@ -1,6 +1,6 @@
-package chess.figures;
+package figures;
 
-import chess.interfaces.IntFigure;
+import interfaces.IntFigure;
 
 
 public abstract class Figure implements IntFigure {
