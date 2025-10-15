@@ -1,7 +1,7 @@
-package chess.figures;
+package figures;
 
-import chess.interfaces.IntChessBoard;
-import chess.exceptions.InvalidCoordinateException;
+import interfaces.IntChessBoard;
+import exceptions.InvalidCoordinateException;
 
 public class ChessBoard implements IntChessBoard {
     private static final int MIN = 1;
