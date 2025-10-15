@@ -1,6 +1,6 @@
-package chess.figures;
+package figures;
 
-import chess.exceptions.InvalidMoveException;
+import exceptions.InvalidMoveException;
 
 public class Knight extends Figure {
     public Knight(String color, char column, int row) {
