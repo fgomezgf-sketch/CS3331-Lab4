@@ -1,6 +1,6 @@
-package chess.interfaces;
+package interfaces;
 
-import chess.exceptions.InvalidCoordinateException;
+import exceptions.InvalidCoordinateException;
 
 public interface IntChessBoard {
     /**
