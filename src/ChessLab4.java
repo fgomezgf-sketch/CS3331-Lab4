@@ -13,6 +13,7 @@ import exceptions.*;
 // * Updated to handle new Figure hierarchy
 // * fixed a few errors with error handling and file names.
 // * moved the files into a java project for easy testing
+// * finished the bishop moving in the main method
 
 
 public class ChessLab4 {
@@ -30,7 +31,7 @@ public class ChessLab4 {
         int figuresCreated = 0;
 
         // loop for creating each of the chess figures
-        while (figuresCreated < 6) {
+        while (figuresCreated < 5) {
             System.out.println("Enter one of the following figures (ROOK, KNIGHT, QUEEN, PAWN, KING, BISHOP):");
 
             String createdFiguresString;
@@ -167,8 +168,38 @@ public class ChessLab4 {
 
         // Test Bishop separately
         System.out.println("\nTesting Bishop separately:");
+        Bishop bishop = null;
+        while (bishop == null) {
+            // Prompt user for figure color
+            System.out.println("Enter figure color (WHITE, BLACK):");
+            Color figureColor;
+            try {
+                figureColor = Color.valueOf(scnr.nextLine().toUpperCase());
+            } catch (Exception e) {
+                System.out.println("Invalid color. Must be WHITE or BLACK. Try again.");
+                continue;
+            }
+
+            // Prompt user for column
+            System.out.println("Enter figure column (a-h):");
+            char figureColumn = scnr.nextLine().toLowerCase().charAt(0);
+
+            System.out.println("Enter figure row (1-8):");
+            int figureRow;
+            try {
+                figureRow = Integer.parseInt(scnr.nextLine());
+                board.verifyCoordinate(figureColumn, figureRow);
+            } catch (InvalidCoordinateException e) {
+                System.out.println(e.getMessage());
+                continue;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid row input. Try again.");
+                continue;
+            }
+            bishop = new Bishop(figureColor.toString(), figureColumn, figureRow);
+        }
+
         try {
-            Bishop bishop = new Bishop("WHITE", 'c', 1);
             boolean validBishopMove = bishop.moveToBishop(targetColumn, targetRow);
             System.out.println("Bishop " + (validBishopMove ? "CAN" : "CANNOT") + "move from c1 to "+ targetColumn + targetRow);
         } catch (Exception e) {
