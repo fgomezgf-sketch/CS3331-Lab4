@@ -14,4 +14,9 @@ public class King extends Queen{
     return dx <= 1 && dy <= 1;
     throw new InvalidMoveException("Invalid move for King from " + posX + posY + " to " + x + y);
   }
+
+  @Override
+  public String toString(){
+    return "King(color = " + color + ", Column = " + posX + ", Row = " + posY + ")";
+  }
 }
