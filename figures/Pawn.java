@@ -10,5 +10,10 @@ public class Pawn extends Figure{
     return(color.equalsIgnoreCase("white") && dy == 1) || (color.equalsIgnoreCase("black") && dy == -1);
     throw new InvalidMoveException("Invalid move for Pawn from " + posX + posY + " to " + x + y);
   }
+
+  @Override
+  public String toString(){
+    return "Pawn(color = " + color + ", Column = " + posX + ", Row = " + posY + ")";
+  }
 }
     
