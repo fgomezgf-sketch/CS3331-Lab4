@@ -9,4 +9,9 @@ public class Rook extends Figure{
     return(x == posX || y == posY);
     throw new InvalidMoveException("Invalid move for Rook from " + posX + posY + " to " + x + y);
   }
+
+  @Override
+  public String toString(){
+    return "Rook(color = " + color + ", Column = " + posX + ", Row = " + posY + ")";
+  }
 }
