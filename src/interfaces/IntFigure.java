@@ -1,6 +1,6 @@
-package chess.interfaces;
+package interfaces;
 
-import chess.exceptions.InvalidMoveException;
+import exceptions.InvalidMoveException;
 
 public interface IntFigure {
   

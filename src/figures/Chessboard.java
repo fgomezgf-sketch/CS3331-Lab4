@@ -1,9 +1,9 @@
 package figures;
 
-import interfaces.IntChessBoard;
+import interfaces.IntChessboard;
 import exceptions.InvalidCoordinateException;
 
-public class ChessBoard implements IntChessBoard {
+public class Chessboard implements IntChessboard {
     private static final int MIN = 1;
     private static final int MAX = 8;
 

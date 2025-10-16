@@ -24,12 +24,10 @@ public class Bishop implements IntBishop {
 
     @Override
     public boolean moveToBishop(char toX, int toY) throws InvalidMoveException {
-        if (toX < 'a' || toX > 'h' || toY < 1 || toY > 8)
-            throw new InvalidMoveException("Target out of board range.");
-
         int dx = Math.abs(toX - this.column);
         int dy = Math.abs(toY - this.row);
-        return dx == dy;
+        if(dx == dy) return true;
+        throw new InvalidMoveException("Invalid move for knight from " + column + row + " to " + toX + toY);
     }
 
     @Override

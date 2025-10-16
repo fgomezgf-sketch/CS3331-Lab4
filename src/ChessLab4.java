@@ -1,9 +1,7 @@
-
-package main;
 import java.util.Scanner;
-import chess.figures.*;
-import chess.interfaces.*;
-import chess.exceptions.*;
+import figures.*;
+import figures.Bishop;
+import exceptions.*;
 
 //Created By Evan Horn, Sebastian Luevano, Fernando Gomez
 //
@@ -13,9 +11,11 @@ import chess.exceptions.*;
 // * Added exception handling for invalid input and invalid moves
 // * Created packages for organization
 // * Updated to handle new Figure hierarchy
+// * fixed a few errors with error handling and file names in the piece classes.
+// * moved the files into a java project for easy testing
 
 
-public class MyChessLab4 {
+public class ChessLab4 {
 
     // enums for parsing the users input
     public enum Color {WHITE, BLACK}
@@ -23,7 +23,7 @@ public class MyChessLab4 {
 
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
-        ChessBoard board = new ChessBoard();
+        Chessboard board = new Chessboard();
 
         // the array of chess figures that have been created
         Figure[] figures = new Figure[6];

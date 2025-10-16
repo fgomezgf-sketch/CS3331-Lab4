@@ -9,12 +9,10 @@ public class Knight extends Figure {
 
     @Override
     public boolean moveTo(char toX, int toY) throws InvalidMoveException {
-        if (toX < 'a' || toX > 'h' || toY < 1 || toY > 8)
-            throw new InvalidMoveException("Target out of board range.");
-
         int dx = Math.abs(toX - this.column);
         int dy = Math.abs(toY - this.row);
-        return (dx == 2 && dy == 1) || (dx == 1 && dy == 2);
+        if ((dx == 2 && dy == 1) || (dx == 1 && dy == 2)) return true;
+        throw new InvalidMoveException("Invalid move for knight from " + column + row + " to " + toX + toY);
     }
 
     @Override
