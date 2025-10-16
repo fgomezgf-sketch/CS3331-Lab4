@@ -5,7 +5,8 @@ public class Rook extends Figure{
   }
 
   @Override
-  public boolean moveTo(char x, int y){
+  public boolean moveTo(char x, int y) throws InvalidMoveException{
     return(x == posX || y == posY);
+    throw new InvalidMoveException("Invalid move for Rook from " + posX + posY + " to " + x + y);
   }
 }
