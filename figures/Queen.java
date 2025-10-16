@@ -14,4 +14,7 @@ public class Queen extends Rook implements IntBishop{
   }
 
   @Override
-  public 
+public String toString(){
+    return "Queen(color = " + color + ", Column = " + posX + ", Row = " + posY + ")";
+}
+}
