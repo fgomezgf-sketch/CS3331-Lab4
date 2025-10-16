@@ -1,7 +1,7 @@
-package chess.figures;
+package figures;
 
-import chess.interfaces.IntBishop;
-import chess.exceptions.InvalidMoveException;
+import interfaces.IntBishop;
+import exceptions.InvalidMoveException;
 
 /**
  * Bishop implements IntBishop (NOT IntFigure / Figure)
