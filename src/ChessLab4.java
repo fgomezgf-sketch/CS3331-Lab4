@@ -169,8 +169,8 @@ public class ChessLab4 {
         System.out.println("\nTesting Bishop separately:");
         try {
             Bishop bishop = new Bishop("WHITE", 'c', 1);
-            boolean validBishopMove = bishop.moveToBishop('f', 4);
-            System.out.println("Bishop " + (validBishopMove ? "CAN" : "CANNOT") + " move to f,4");
+            boolean validBishopMove = bishop.moveToBishop(targetColumn, targetRow);
+            System.out.println("Bishop " + (validBishopMove ? "CAN" : "CANNOT") + "move from c1 to "+ targetColumn + targetRow);
         } catch (Exception e) {
             System.out.println("Error testing Bishop: " + e.getMessage());
         }
