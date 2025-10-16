@@ -11,7 +11,7 @@ import exceptions.*;
 // * Added exception handling for invalid input and invalid moves
 // * Created packages for organization
 // * Updated to handle new Figure hierarchy
-// * fixed a few errors with error handling and file names in the piece classes.
+// * fixed a few errors with error handling and file names.
 // * moved the files into a java project for easy testing
 
 
